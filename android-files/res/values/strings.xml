@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, SPOT!</string>
+    <string name="app_name">SPOT</string>
+<string name="accelerometer_label">Accelerometer</string>
+<string name="gps_label">GPS</string>
+<string name="service_label">Running as Service:</string>
+<string name="value_label">Current Value:</string>
+<string name="current_config">Current Configuration</string>
+<string name="active">Active: </string>
+</resources>

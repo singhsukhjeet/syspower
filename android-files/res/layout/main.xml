@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	
+	<TextView android:text="@string/current_config" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" />
+
+
+	<View android:layout_width="fill_parent" android:layout_height="2dip"
+		android:background="#FF00FF00" />
+
+	<TextView android:text="@string/gps_label" android:id="@+id/gps_label_tv"
+		android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
+
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="horizontal" android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+
+		<TextView android:text="@string/value_label" android:id="@+id/gps_value_label"
+			android:layout_width="wrap_content" android:layout_height="wrap_content" />
+		<TextView android:text="" android:id="@+id/gps_value"
+			android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
+	</LinearLayout>
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="horizontal" android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+		
+		<TextView android:text="@string/active" 
+				android:layout_width="wrap_content" android:layout_height="wrap_content" />
+		<TextView android:id="@+id/gps_active" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+	</LinearLayout>
+		
+	
+
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="horizontal" android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+
+		<TextView android:text="@string/service_label" android:id="@+id/gps_service_label"
+			android:layout_width="wrap_content" android:layout_height="wrap_content" />
+		<TextView android:text="" android:id="@+id/gps_service_value"
+			android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
+	</LinearLayout>
+	
+	<View android:layout_width="fill_parent" android:layout_height="2dip"
+		android:background="#FF00FF00" />
+		
+	<TextView android:text="@string/accelerometer_label" android:id="@+id/acc_label_tv"
+		android:layout_width="wrap_content" android:layout_height="wrap_content" />
+		
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="horizontal" android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+
+		<TextView android:text="@string/value_label" android:id="@+id/acc_value_label"
+			android:layout_width="wrap_content" android:layout_height="wrap_content" />
+		<TextView android:text="" android:id="@+id/acc_value"
+			android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
+	</LinearLayout>
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="horizontal" android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+		
+		<TextView android:text="@string/active" 
+				android:layout_width="wrap_content" android:layout_height="wrap_content" />
+		<TextView android:id="@+id/acc_active" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+	</LinearLayout>
+	
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="horizontal" android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+
+		<TextView android:text="@string/service_label" android:id="@+id/acc_service_label"
+			android:layout_width="wrap_content" android:layout_height="wrap_content" />
+		<TextView android:text="" android:id="@+id/acc_service_value"
+			android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
+	</LinearLayout>
+	
+
+
+
+</LinearLayout>
