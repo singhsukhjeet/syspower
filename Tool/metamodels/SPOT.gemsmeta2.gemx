@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Metamodel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.sf.net/projects/gems/metamodel2" Name="Simulator" Id="ffffffffc0a80196_86" DSMLID="http://www.sf.net/projects/gems/dsml/spot" FileExtensions="spot" Category="SPOT">
+  <Connection Name="ActivityToServiceDataPath" Id="ffffffffc0a83801_484" X="455" Y="246" Width="147" Height="54" ExpandedWidth="0" ExpandedHeight="0" Expanded="true">
+    <ConnectionTarget href="SPOT.gemsmeta2#//@ConnectionTargetConnection.0"/>
+    <ConnectionSource href="SPOT.gemsmeta2#//@ConnectionSourceConnection.0"/>
+  </Connection>
+  <Connection Name="ServiceToActivityDataPath" Id="ffffffffc0a83801_612" X="254" Y="244" Width="147" Height="54">
+    <ConnectionTarget href="SPOT.gemsmeta2#//@ConnectionTargetConnection.1"/>
+    <ConnectionSource href="SPOT.gemsmeta2#//@ConnectionSourceConnection.1"/>
+  </Connection>
+  <Entity Name="SPOT" Id="ffffffffc0a80196_87" X="96" Y="212" Width="73" Height="74" ExpandedWidth="50" ExpandedHeight="35" IsRoot="true">
+    <ChildEntities href="SPOT.gemsmeta2#//@ContainmentConnectionConnection.5"/>
+    <ChildEntities href="SPOT.gemsmeta2#//@ContainmentConnectionConnection.11"/>
+  </Entity>
+  <Entity Name="GpsConsumer" Id="ffffffffc0a80196_174" X="749" Y="228" Width="141" Height="90" ExpandedWidth="0" ExpandedHeight="0" Expanded="true">
+    <Attribute Name="SampleRate" Id="ffffffffc0a80196_241" AttributeType="Integer" AllowedValues=""/>
+    <Attribute Name="Precision" Id="ffffffffc0a80196_243" AttributeType="Integer" AllowedValues=""/>
+    <ParentEntity href="SPOT.gemsmeta2#//@ContainmentConnectionConnection.2"/>
+    <ParentEntity href="SPOT.gemsmeta2#//@ContainmentConnectionConnection.8"/>
+  </Entity>
+  <Entity Name="AccelerometerConsumer" Id="ffffffffc0a80196_244" X="1025" Y="313" Width="141" Height="62" ExpandedWidth="0" ExpandedHeight="0" Expanded="true">
+    <Attribute Name="SampleRate" Id="ffffffffc0a80196_246" AttributeType="Integer"/>
+    <ParentEntity href="SPOT.gemsmeta2#//@ContainmentConnectionConnection.1"/>
+    <ParentEntity href="SPOT.gemsmeta2#//@ContainmentConnectionConnection.9"/>
+  </Entity>
+  <Entity Name="CpuConsumer" Id="ffffffffc0a80196_283" X="765" Y="368" Width="190" Height="90" ExpandedWidth="0" ExpandedHeight="0" Expanded="true">
+    <Attribute Name="CalculationsPerCycle" Id="ffffffffc0a80196_284" AttributeType="Integer"/>
+    <Attribute Name="Msecbetweencycles" Id="ffffffffc0a80196_286" AttributeType="Integer"/>
+    <ParentEntity href="SPOT.gemsmeta2#//@ContainmentConnectionConnection.0"/>
+    <ParentEntity href="SPOT.gemsmeta2#//@ContainmentConnectionConnection.10"/>
+  </Entity>
+  <Entity Name="OpenGLConsumer" Id="ffffffffc0a80196_322" X="1040" Y="164" Width="106" Height="74">
+    <ParentEntity href="SPOT.gemsmeta2#//@ContainmentConnectionConnection.3"/>
+    <ParentEntity href="SPOT.gemsmeta2#//@ContainmentConnectionConnection.7"/>
+  </Entity>
+  <Entity Name="NetworkConsumer" Id="ffffffffc0a80196_350" X="726" Y="62" Width="194" Height="146" ExpandedWidth="171" ExpandedHeight="107" Expanded="true">
+    <Attribute Name="UseCellNetworkOnly" Id="ffffffffc0a80196_352" AttributeType="Boolean" DefaultValue="false"/>
+    <Attribute Name="TransmissionScheme" Id="ffffffffc0a80196_353" AttributeType="Integer"/>
+    <Attribute Name="Data" Id="ffffffffc0a80196_354"/>
+    <Attribute Name="UseWiFiOnly" Id="ffffffffc0a80196_351" AttributeType="Boolean" DefaultValue="false"/>
+    <ParentEntity href="SPOT.gemsmeta2#//@ContainmentConnectionConnection.4"/>
+    <ParentEntity href="SPOT.gemsmeta2#//@ContainmentConnectionConnection.6"/>
+  </Entity>
+  <Entity Name="Activity" Id="ffffffffc0a83801_194" X="404" Y="346" Width="73" Height="74">
+    <ParentEntity href="SPOT.gemsmeta2#//@ContainmentConnectionConnection.5"/>
+    <SourceConnectionDeclarations href="SPOT.gemsmeta2#//@ConnectionSourceConnection.0"/>
+    <ConnectionTargets href="SPOT.gemsmeta2#//@ConnectionTargetConnection.1"/>
+    <ChildEntities href="SPOT.gemsmeta2#//@ContainmentConnectionConnection.0"/>
+    <ChildEntities href="SPOT.gemsmeta2#//@ContainmentConnectionConnection.1"/>
+    <ChildEntities href="SPOT.gemsmeta2#//@ContainmentConnectionConnection.2"/>
+    <ChildEntities href="SPOT.gemsmeta2#//@ContainmentConnectionConnection.3"/>
+    <ChildEntities href="SPOT.gemsmeta2#//@ContainmentConnectionConnection.4"/>
+  </Entity>
+  <Entity Name="Service" Id="ffffffffc0a83801_379" X="396" Y="133" Width="73" Height="74" ExpandedWidth="50" ExpandedHeight="35">
+    <ParentEntity href="SPOT.gemsmeta2#//@ContainmentConnectionConnection.11"/>
+    <SourceConnectionDeclarations href="SPOT.gemsmeta2#//@ConnectionSourceConnection.1"/>
+    <ConnectionTargets href="SPOT.gemsmeta2#//@ConnectionTargetConnection.0"/>
+    <ChildEntities href="SPOT.gemsmeta2#//@ContainmentConnectionConnection.6"/>
+    <ChildEntities href="SPOT.gemsmeta2#//@ContainmentConnectionConnection.7"/>
+    <ChildEntities href="SPOT.gemsmeta2#//@ContainmentConnectionConnection.8"/>
+    <ChildEntities href="SPOT.gemsmeta2#//@ContainmentConnectionConnection.9"/>
+    <ChildEntities href="SPOT.gemsmeta2#//@ContainmentConnectionConnection.10"/>
+  </Entity>
+</metamodel:Metamodel>

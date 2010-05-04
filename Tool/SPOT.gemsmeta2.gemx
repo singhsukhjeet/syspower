@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Metamodel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.sf.net/projects/gems/metamodel2" Name="Simulator" Id="ffffffffc0a80196_86">
+  <Entity Name="Model" Id="ffffffffc0a80196_87" X="636" Y="234" Width="73" Height="74" ExpandedWidth="50" ExpandedHeight="35">
+    <ChildEntities href="SPOT.gemsmeta2#//@ContainmentConnectionConnection.0"/>
+    <ChildEntities href="SPOT.gemsmeta2#//@ContainmentConnectionConnection.1"/>
+    <ChildEntities href="SPOT.gemsmeta2#//@ContainmentConnectionConnection.2"/>
+    <ChildEntities href="SPOT.gemsmeta2#//@ContainmentConnectionConnection.3"/>
+    <ChildEntities href="SPOT.gemsmeta2#//@ContainmentConnectionConnection.4"/>
+  </Entity>
+  <Entity Name="GPS Consumer" Id="ffffffffc0a80196_174" X="918" Y="451" Width="175" Height="90" ExpandedWidth="127" ExpandedHeight="23" Expanded="true">
+    <Attribute Name="Sample Rate" Id="ffffffffc0a80196_241" AttributeType="Enumeration"/>
+    <Attribute Name="Precision" Id="ffffffffc0a80196_243" AttributeType="Enumeration"/>
+    <ParentEntity href="SPOT.gemsmeta2#//@ContainmentConnectionConnection.0"/>
+  </Entity>
+  <Entity Name="Accelerometer Consumer" Id="ffffffffc0a80196_244" X="544" Y="455" Width="175" Height="62" ExpandedWidth="120" ExpandedHeight="35" Expanded="true">
+    <Attribute Name="Sample Rate" Id="ffffffffc0a80196_246" AttributeType="Enumeration"/>
+    <ParentEntity href="SPOT.gemsmeta2#//@ContainmentConnectionConnection.1"/>
+  </Entity>
+  <Entity Name="CPU Consumer" Id="ffffffffc0a80196_283" X="225" Y="427" Width="196" Height="90" ExpandedWidth="173" ExpandedHeight="23" Expanded="true">
+    <Attribute Name="Calculations per Cycle" Id="ffffffffc0a80196_284" AttributeType="Integer"/>
+    <Attribute Name="msec between cycles" Id="ffffffffc0a80196_286" AttributeType="Integer"/>
+    <ParentEntity href="SPOT.gemsmeta2#//@ContainmentConnectionConnection.2"/>
+  </Entity>
+  <Entity Name="OpenGL Consumer" Id="ffffffffc0a80196_322" X="1228" Y="414">
+    <ParentEntity href="SPOT.gemsmeta2#//@ContainmentConnectionConnection.3"/>
+  </Entity>
+  <Entity Name="Network Consumer" Id="ffffffffc0a80196_350" X="1130" Y="222" Width="225" Height="118" ExpandedWidth="202" ExpandedHeight="79" Expanded="true">
+    <Attribute Name="UseWiFi Only" Id="ffffffffc0a80196_351" AttributeType="Boolean"/>
+    <Attribute Name="Use Cell Network Only" Id="ffffffffc0a80196_352" AttributeType="Boolean"/>
+    <Attribute Name="Transmission Scheme" Id="ffffffffc0a80196_353" AttributeType="Enumeration"/>
+    <Attribute Name="Data" Id="ffffffffc0a80196_354"/>
+    <ParentEntity href="SPOT.gemsmeta2#//@ContainmentConnectionConnection.4"/>
+  </Entity>
+</metamodel:Metamodel>

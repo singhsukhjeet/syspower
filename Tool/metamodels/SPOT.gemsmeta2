@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodel:Root xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:metamodel="http://www.sf.net/projects/gems/metamodel2">
+  <RealRoot Name="Simulator" Id="ffffffffc0a80196_86" DSMLID="http://www.sf.net/projects/gems/dsml/spot" FileExtensions="spot" Category="SPOT">
+    <Connection Name="ActivityToServiceDataPath" Id="ffffffffc0a83801_484" X="455" Y="246" Width="147" Height="54" ExpandedWidth="0" ExpandedHeight="0" Expanded="true" ConnectionTarget="//@ConnectionTargetConnection.0" ConnectionSource="//@ConnectionSourceConnection.0"/>
+    <Connection Name="ServiceToActivityDataPath" Id="ffffffffc0a83801_612" X="254" Y="244" Width="147" Height="54" ConnectionTarget="//@ConnectionTargetConnection.1" ConnectionSource="//@ConnectionSourceConnection.1"/>
+    <Entity Name="SPOT" Id="ffffffffc0a80196_87" X="96" Y="212" Width="73" Height="74" ExpandedWidth="50" ExpandedHeight="35" IsRoot="true" ChildEntities="//@ContainmentConnectionConnection.5 //@ContainmentConnectionConnection.11"/>
+    <Entity Name="GpsConsumer" Id="ffffffffc0a80196_174" X="749" Y="228" Width="141" Height="90" ExpandedWidth="0" ExpandedHeight="0" Expanded="true" ParentEntity="//@ContainmentConnectionConnection.2 //@ContainmentConnectionConnection.8">
+      <Attribute Name="SampleRate" Id="ffffffffc0a80196_241" AttributeType="Integer" AllowedValues=""/>
+      <Attribute Name="Precision" Id="ffffffffc0a80196_243" AttributeType="Integer" AllowedValues=""/>
+    </Entity>
+    <Entity Name="AccelerometerConsumer" Id="ffffffffc0a80196_244" X="1025" Y="313" Width="141" Height="62" ExpandedWidth="0" ExpandedHeight="0" Expanded="true" ParentEntity="//@ContainmentConnectionConnection.1 //@ContainmentConnectionConnection.9">
+      <Attribute Name="SampleRate" Id="ffffffffc0a80196_246" AttributeType="Integer"/>
+    </Entity>
+    <Entity Name="CpuConsumer" Id="ffffffffc0a80196_283" X="765" Y="368" Width="190" Height="90" ExpandedWidth="0" ExpandedHeight="0" Expanded="true" ParentEntity="//@ContainmentConnectionConnection.0 //@ContainmentConnectionConnection.10">
+      <Attribute Name="CalculationsPerCycle" Id="ffffffffc0a80196_284" AttributeType="Integer"/>
+      <Attribute Name="Msecbetweencycles" Id="ffffffffc0a80196_286" AttributeType="Integer"/>
+    </Entity>
+    <Entity Name="OpenGLConsumer" Id="ffffffffc0a80196_322" X="1040" Y="164" Width="106" Height="74" ParentEntity="//@ContainmentConnectionConnection.3 //@ContainmentConnectionConnection.7"/>
+    <Entity Name="NetworkConsumer" Id="ffffffffc0a80196_350" X="726" Y="62" Width="194" Height="146" ExpandedWidth="171" ExpandedHeight="107" Expanded="true" ParentEntity="//@ContainmentConnectionConnection.4 //@ContainmentConnectionConnection.6">
+      <Attribute Name="UseCellNetworkOnly" Id="ffffffffc0a80196_352" AttributeType="Boolean" DefaultValue="false"/>
+      <Attribute Name="TransmissionScheme" Id="ffffffffc0a80196_353" AttributeType="Integer"/>
+      <Attribute Name="Data" Id="ffffffffc0a80196_354"/>
+      <Attribute Name="UseWiFiOnly" Id="ffffffffc0a80196_351" AttributeType="Boolean" DefaultValue="false"/>
+    </Entity>
+    <Entity Name="Activity" Id="ffffffffc0a83801_194" X="404" Y="346" Width="73" Height="74" ParentEntity="//@ContainmentConnectionConnection.5" SourceConnectionDeclarations="//@ConnectionSourceConnection.0" ConnectionTargets="//@ConnectionTargetConnection.1" ChildEntities="//@ContainmentConnectionConnection.0 //@ContainmentConnectionConnection.1 //@ContainmentConnectionConnection.2 //@ContainmentConnectionConnection.3 //@ContainmentConnectionConnection.4"/>
+    <Entity Name="Service" Id="ffffffffc0a83801_379" X="396" Y="133" Width="73" Height="74" ExpandedWidth="50" ExpandedHeight="35" ParentEntity="//@ContainmentConnectionConnection.11" SourceConnectionDeclarations="//@ConnectionSourceConnection.1" ConnectionTargets="//@ConnectionTargetConnection.0" ChildEntities="//@ContainmentConnectionConnection.6 //@ContainmentConnectionConnection.7 //@ContainmentConnectionConnection.8 //@ContainmentConnectionConnection.9 //@ContainmentConnectionConnection.10"/>
+  </RealRoot>
+  <ConnectionSourceConnection Source="//@RealRoot/@Entity.6" Target="//@RealRoot/@Connection.0" SourceRole="BindingDataPath"/>
+  <ConnectionSourceConnection Source="//@RealRoot/@Entity.7" Target="//@RealRoot/@Connection.1" SourceRole="CallbackDataPath"/>
+  <ConnectionTargetConnection Source="//@RealRoot/@Connection.0" Target="//@RealRoot/@Entity.7" TargetRole="Binding"/>
+  <ConnectionTargetConnection Source="//@RealRoot/@Connection.1" Target="//@RealRoot/@Entity.6" TargetRole="Callback"/>
+  <ContainmentConnectionConnection Source="//@RealRoot/@Entity.3" Target="//@RealRoot/@Entity.6" RoleOfChild="CpuConsumerActivity" RoleOfParent="ActivityCpuConsumer"/>
+  <ContainmentConnectionConnection Source="//@RealRoot/@Entity.2" Target="//@RealRoot/@Entity.6" RoleOfChild="AccelerometerConsumerActivity" RoleOfParent="ActivityAccelerometerConsumer"/>
+  <ContainmentConnectionConnection Source="//@RealRoot/@Entity.1" Target="//@RealRoot/@Entity.6" RoleOfChild="GpsConsumerActivity" RoleOfParent="ActivityGpsConsumer"/>
+  <ContainmentConnectionConnection Source="//@RealRoot/@Entity.4" Target="//@RealRoot/@Entity.6" RoleOfChild="OpenGlConsumerActivity" RoleOfParent="ActivityOpenGlConsumer"/>
+  <ContainmentConnectionConnection Source="//@RealRoot/@Entity.5" Target="//@RealRoot/@Entity.6" RoleOfChild="NetworkConsumerActivity" RoleOfParent="ActivityNetworkConsumer"/>
+  <ContainmentConnectionConnection Source="//@RealRoot/@Entity.6" Target="//@RealRoot/@Entity.0" RoleOfChild="Activity" RoleOfParent="SpotActivity"/>
+  <ContainmentConnectionConnection Source="//@RealRoot/@Entity.5" Target="//@RealRoot/@Entity.7" RoleOfChild="NetworkConsumerService" RoleOfParent="ServiceNetworkConsumer"/>
+  <ContainmentConnectionConnection Source="//@RealRoot/@Entity.4" Target="//@RealRoot/@Entity.7" RoleOfChild="OpenGlConsumerService" RoleOfParent="ServiceOpenGlConsumer"/>
+  <ContainmentConnectionConnection Source="//@RealRoot/@Entity.1" Target="//@RealRoot/@Entity.7" RoleOfChild="GpsConsumerService" RoleOfParent="ServiceGpsConsumer"/>
+  <ContainmentConnectionConnection Source="//@RealRoot/@Entity.2" Target="//@RealRoot/@Entity.7" RoleOfChild="AccelerometerConsumerService" RoleOfParent="ServiceAccelerometerConsumer"/>
+  <ContainmentConnectionConnection Source="//@RealRoot/@Entity.3" Target="//@RealRoot/@Entity.7" RoleOfChild="CpuConsumerService" RoleOfParent="ServiceCpuConsumer"/>
+  <ContainmentConnectionConnection Source="//@RealRoot/@Entity.7" Target="//@RealRoot/@Entity.0" RoleOfChild="Service" RoleOfParent="SpotService"/>
+</metamodel:Root>
